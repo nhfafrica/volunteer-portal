@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const nhfBlue = "#4a90e2";
-const nhfYellow = "#e7ff00";
+// const nhfYellow = "#e7ff00";
 
 export const VolunterSplash = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ export const Copyright = styled.div`
   position: absolute;
   bottom: 2%;
   margin-left: 2rem;
-  font-size: .8rem;
+  font-size: 0.8rem;
 `;
 
 export const TitleText = styled.h1`
