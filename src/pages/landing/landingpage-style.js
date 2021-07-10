@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "../../components/Button";
 
 const nhfBlue = "#4a90e2";
-// const nhfYellow = "#e7ff00";
+const nhfYellow = "#e7ff00";
 
 export const LandingPageComponent = styled.div`
   display: flex;
@@ -230,4 +230,11 @@ export const ButtonStyle = styled(Button)`
   border-radius: 0;
   margin-top: 4rem;
   width: 12rem;
+  cursor: pointer;
+  font-size: 1rem;
+
+  &:hover {
+      background-color: ${nhfYellow};
+      color: #000;
+  }
 `;
