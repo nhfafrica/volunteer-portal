@@ -27,6 +27,7 @@ export const VolunterSplash = styled.div`
   background-color: ${nhfBlue};
   width: 56%;
   height: 100vh;
+  justify-content: center;
 
   @media only screen and (max-width: 786px) {
     display: flex;
