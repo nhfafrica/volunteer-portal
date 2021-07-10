@@ -7,9 +7,14 @@ import {
   FormTitle,
   FormBody,
   Copyright,
-  Form,
+  FormMain,
   SectionHeader,
 } from "./form-page-style";
+import "bulma/css/bulma.min.css";
+import { Form, Columns } from "react-bulma-components";
+
+const { Input, Field, Control, Label } = Form;
+const { Column } = Columns;
 
 const FormPage = () => {
   return (
@@ -25,9 +30,27 @@ const FormPage = () => {
           <FormTitle>NHF Volunteer Application</FormTitle>
         </FormHeader>
         <FormBody>
-          <Form>
+          <FormMain>
             <SectionHeader>Personal Identifying Information</SectionHeader>
-          </Form>
+            <Columns>
+              <Column>
+                <Field>
+                  <Label>First Name</Label>
+                  <Control>
+                    <Input type="text" name="firstName" />
+                  </Control>
+                </Field>
+              </Column>
+              <Column>
+                <Field>
+                  <Label>Last Name</Label>
+                  <Control>
+                    <Input type="text" name="lastName" />
+                  </Control>
+                </Field>
+              </Column>
+            </Columns>
+          </FormMain>
         </FormBody>
       </FormContainer>
       <Copyright>

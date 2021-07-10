@@ -11,6 +11,11 @@ export const MainContainer = styled.div`
 export const FormContainer = styled.div`
   width: 60%;
   margin-top: 4rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+      width: 95%;
+  }
 `;
 
 export const HeaderImageWrapper = styled.div`
@@ -39,6 +44,11 @@ export const FormTitle = styled.h1`
   color: #fff;
   font-weight: 300;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 `;
 
 export const FormBody = styled.div`
@@ -47,12 +57,18 @@ export const FormBody = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-bottom: 3rem;
 `;
 
-export const Copyright = styled.p``;
+export const Copyright = styled.p`
+margin-bottom: 4rem;
+color: #000;
+`;
 
-export const Form = styled.div`
+export const FormMain = styled.div`
   width: 100%;
+  margin-left: 4rem;
+  margin-right: 4rem;
 `;
 
 export const SectionHeader = styled.h4`
@@ -60,6 +76,6 @@ export const SectionHeader = styled.h4`
   font-size: 1.125rem;
   color: #00418c;
   text-transform: uppercase;
-  margin-left: 3rem;
   margin-top: 3rem;
+  margin-bottom: 2rem;
 `;
