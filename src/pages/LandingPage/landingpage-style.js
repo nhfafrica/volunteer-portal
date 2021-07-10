@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "../../components/Button";
 
 const nhfBlue = "#4a90e2";
 // const nhfYellow = "#e7ff00";
@@ -109,6 +110,9 @@ export const WarningWrapper = styled.div`
   background-color: #fff;
   width: 44%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media only screen and (max-width: 786px) {
     display: flex;
@@ -127,4 +131,40 @@ export const Logo = styled.img`
     margin-left: 2rem;
     margin-top: 3rem;
   }
+`;
+
+export const WarningSubtitle = styled.h4`
+  text-transform: uppercase;
+  font-family: "Roboto Condensed";
+  margin-top: 6.563rem;
+`;
+
+export const WarningTitle = styled.h1`
+  text-transform: uppercase;
+  font-family: "PT Sans";
+  font-size: 1.5rem;
+  color: ${nhfBlue};
+`;
+
+export const WarningText = styled.div`
+  font-family: "Roboto";
+  font-size: 1rem;
+  line-height: 1.172rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  margin-top: 2rem;
+
+  &>p {
+      margin-top: 2rem;
+  }
+`;
+
+export const ButtonStyle = styled(Button)`
+  text-transform: uppercase;
+  font-family: "Dosis";
+  background-color: ${nhfBlue};
+  color: #fff;
+  border-radius: 0;
+  margin-top: 4rem;
+  width: 12rem;
 `;

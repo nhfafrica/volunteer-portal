@@ -13,7 +13,9 @@ function App() {
           "Old Standard TT",
           "Dosis",
           "Roboto Slab",
+          "Roboto",
           "Roboto Condensed",
+          "PT Sans",
         ],
       },
     });
