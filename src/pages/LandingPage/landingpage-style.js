@@ -52,6 +52,10 @@ export const Copyright = styled.div`
   bottom: 3rem;
   margin-left: 2rem;
 
+  @media only screen and (max-width: 1024px) {
+      bottom: 2rem;
+  }
+
   @media only screen and (max-width: 786px) {
     position: relative;
     color: ${nhfBlue};
@@ -68,6 +72,11 @@ export const TitleText = styled.h1`
   font-size: 7rem;
   font-weight: 400;
   margin-top: 12rem;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 6rem;
+    margin-left: 4rem;
+  }
 
   @media only screen and (max-width: 786px) {
     font-size: 5rem;
@@ -90,6 +99,10 @@ export const SubtitleText = styled.h4`
     font-style: normal;
   }
 
+  @media only screen and (max-width: 1024px) {
+      margin-left: 4rem;
+  }
+
   @media only screen and (max-width: 786px) {
     font-size: ${({ type }) =>
       type === "other-words" ? "0.863rem" : "1.4rem"};
@@ -107,6 +120,12 @@ export const Definition = styled.p`
   line-height: 1.5;
   margin-top: 2rem;
 
+  @media only screen and (max-width: 1024px) {
+      margin-left: 4rem;
+      width: 76%;
+      font-size: 1.2rem;
+  }
+
   @media only screen and (max-width: 786px) {
     margin-left: 3rem;
     font-size: 1.2rem;
@@ -121,6 +140,10 @@ export const WarningWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and (max-width: 1024px) {
+      padding-bottom: 2rem;
+  }
 
   @media only screen and (max-width: 786px) {
     display: flex;
@@ -148,6 +171,10 @@ export const WarningSubtitle = styled.h4`
   font-family: "Roboto Condensed";
   margin-top: 6.563rem;
 
+  @media only screen and (max-width: 1024px) {
+      margin-top: 3rem;
+  }
+
   @media only screen and (max-width: 786px) {
     margin-top: 4rem;
   }
@@ -174,6 +201,17 @@ export const WarningText = styled.div`
 
   & > p {
     margin-top: 2rem;
+  }
+
+  @media only screen and (max-width: 1024px) {
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
+      margin-top: 1rem;
+      font-size: .9rem;
+
+      & > p {
+          margin-top: 0.7rem;
+      }
   }
 
   @media only screen and (max-width: 786px) {
