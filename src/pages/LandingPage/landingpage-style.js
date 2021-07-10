@@ -100,8 +100,8 @@ export const Definition = styled.p`
 
   @media only screen and (max-width: 786px) {
     margin-left: 3rem;
-    font-size: 0.863rem;
-    line-height: 1.294rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
     width: 76%;
   }
 `;
