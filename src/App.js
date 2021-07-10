@@ -17,20 +17,21 @@ function App() {
           "Roboto",
           "Roboto Condensed",
           "PT Sans",
+          "Fjalla One",
         ],
       },
     });
   }, []);
 
-    return (
+  return (
     <div className="App">
-            <GlobalStyle />
-            <Router>
-                <Switch>
-                    <Route exact path="/" component={LandingPage} />
-                    <Route exact path="/apply" component={FormPage}></Route>
-                </Switch>
-            </Router>
+      <GlobalStyle />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/apply" component={FormPage}></Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
