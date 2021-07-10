@@ -33,7 +33,15 @@ export const VolunterSplash = styled.div`
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    align-self: center;
+    justify-content: center;
+  }
+`;
+
+export const DefinitionContainer = styled.div`
+  @media only screen and (max-width: 786px) {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
   }
 `;
 
@@ -65,7 +73,7 @@ export const TitleText = styled.h1`
     font-size: 5rem;
     margin-left: 3rem;
     font-size: 4.14rem;
-    margin-top: 10rem;
+    margin-top: 0rem;
   }
 `;
 
@@ -101,8 +109,7 @@ export const Definition = styled.p`
 
   @media only screen and (max-width: 786px) {
     margin-left: 3rem;
-    font-size: 1.4rem;
-    line-height: 1.7rem;
+    font-size: 1.2rem;
     width: 76%;
   }
 `;
@@ -127,6 +134,7 @@ export const Logo = styled.img`
   width: 150px;
   margin-left: 4rem;
   margin-top: 5rem;
+  position: absolute;
 
   @media only screen and (max-width: 786px) {
     width: 100px;
@@ -141,7 +149,7 @@ export const WarningSubtitle = styled.h4`
   margin-top: 6.563rem;
 
   @media only screen and (max-width: 786px) {
-      margin-top: 4rem;
+    margin-top: 4rem;
   }
 `;
 
@@ -152,7 +160,7 @@ export const WarningTitle = styled.h1`
   color: ${nhfBlue};
 
   @media only screen and (max-width: 786px) {
-      margin-top: 5px;
+    margin-top: 5px;
   }
 `;
 
@@ -164,14 +172,14 @@ export const WarningText = styled.div`
   margin-right: 6rem;
   margin-top: 2rem;
 
-  &>p {
-      margin-top: 2rem;
+  & > p {
+    margin-top: 2rem;
   }
 
   @media only screen and (max-width: 786px) {
-      margin-top: .5rem;
-      margin-left: 2.5rem;
-      margin-right: 2.5rem;
+    margin-top: 0.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
 `;
 
