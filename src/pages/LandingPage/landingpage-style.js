@@ -117,7 +117,8 @@ export const WarningWrapper = styled.div`
   @media only screen and (max-width: 786px) {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 4rem;
   }
 `;
 
@@ -137,6 +138,10 @@ export const WarningSubtitle = styled.h4`
   text-transform: uppercase;
   font-family: "Roboto Condensed";
   margin-top: 6.563rem;
+
+  @media only screen and (max-width: 786px) {
+      margin-top: 4rem;
+  }
 `;
 
 export const WarningTitle = styled.h1`
@@ -144,6 +149,10 @@ export const WarningTitle = styled.h1`
   font-family: "PT Sans";
   font-size: 1.5rem;
   color: ${nhfBlue};
+
+  @media only screen and (max-width: 786px) {
+      margin-top: 5px;
+  }
 `;
 
 export const WarningText = styled.div`
@@ -156,6 +165,12 @@ export const WarningText = styled.div`
 
   &>p {
       margin-top: 2rem;
+  }
+
+  @media only screen and (max-width: 786px) {
+      margin-top: .5rem;
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
   }
 `;
 
