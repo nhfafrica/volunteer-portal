@@ -84,8 +84,8 @@ function LandingPage() {
               the right to do the same.
             </p>
           </WarningText>
-          <Link to="/apply" component={Button}>
-            I agree
+          <Link to="/apply">
+            <Button>I agree</Button>
           </Link>
         </WarningWrapper>
       </LandingPageContainer>
