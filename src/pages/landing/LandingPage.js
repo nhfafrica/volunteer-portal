@@ -80,12 +80,40 @@ function LandingPage() {
           </Link>
         </WarningWrapper>
       </LandingPageContainer>
-      <Copyright />
+      <CopyrightContainer>
+        <Copyright />
+      </CopyrightContainer>
     </LandingPageComponent>
   );
 }
 
 // STYLES
+const CopyrightContainer = styled.div`
+  position: absolute;
+  bottom: 3rem;
+  margin-left: 2rem;
+
+  & div, a {
+    color: white;
+  }
+
+  @media only screen and (max-width: 1024px) {
+      bottom: 1rem;
+  }
+
+  @media only screen and (max-width: 786px) {
+      position: relative;
+      color: ${nhfBlue};
+      margin-left: 0;
+      align-self: center;
+      bottom: 1rem;
+
+      & div, a {
+          color: ${nhfBlue};
+      }
+  }
+`;
+
 const LandingPageComponent = styled.div`
   display: flex;
   flex-direction: column;
