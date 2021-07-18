@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import Copyright from "../../components/Copyright";
+import Logo from "../../components/Logo";
 import {
   LandingPageComponent,
   LandingPageContainer,
   VolunterSplash,
   TitleText,
   SubtitleText,
-  Logo,
   Definition,
   WarningWrapper,
   WarningSubtitle,
@@ -21,7 +21,7 @@ function LandingPage() {
   return (
     <LandingPageComponent>
       <LandingPageContainer>
-        <Logo src="/images/logo.png" />
+        <Logo/>
         <VolunterSplash>
           <DefinitionContainer>
             <TitleText>Volunteer</TitleText>
