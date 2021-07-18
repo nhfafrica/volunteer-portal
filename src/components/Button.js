@@ -14,8 +14,7 @@ const ButtonStyle = styled.button`
   background-color: ${nhfBlue};
   color: #fff;
   border-radius: 0;
-  margin-top: 4rem;
-  width: 12rem;
+  width: ${(props) => props.width || "12rem"};
   cursor: pointer;
   font-size: large;
 

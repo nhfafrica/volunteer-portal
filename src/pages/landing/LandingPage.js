@@ -77,9 +77,9 @@ function LandingPage() {
               the right to do the same.
             </p>
           </WarningText>
-          <Link to="/apply">
+          <ButtonContainer to="/apply">
             <Button>I agree</Button>
-          </Link>
+          </ButtonContainer>
         </WarningWrapper>
       </LandingPageContainer>
       <CopyrightContainer>
@@ -90,6 +90,14 @@ function LandingPage() {
 }
 
 // STYLES
+const ButtonContainer = styled(Link)`
+  margin-top: 4rem;
+
+  @media (max-width: 1024px) {
+      margin-top: 2rem;
+  }
+`;
+
 const LogoContainer = styled.div`
   margin-left: 4rem;
   width: 150px;
