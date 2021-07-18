@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
+import Copyright from "../../components/Copyright";
 import {
   LandingPageComponent,
   LandingPageContainer,
   VolunterSplash,
-  Copyright,
   TitleText,
   SubtitleText,
   Logo,
@@ -89,9 +89,7 @@ function LandingPage() {
           </Link>
         </WarningWrapper>
       </LandingPageContainer>
-      <Copyright>
-        &copy; {new Date().getFullYear()} Nyuma Harrison Foundation
-      </Copyright>
+      <Copyright />
     </LandingPageComponent>
   );
 }

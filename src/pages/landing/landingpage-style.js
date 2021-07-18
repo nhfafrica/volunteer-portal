@@ -45,26 +45,6 @@ export const DefinitionContainer = styled.div`
   }
 `;
 
-export const Copyright = styled.div`
-  color: #fff;
-  font-size: 0.8rem;
-  position: absolute;
-  bottom: 3rem;
-  margin-left: 2rem;
-
-  @media only screen and (max-width: 1024px) {
-    bottom: 2rem;
-  }
-
-  @media only screen and (max-width: 786px) {
-    position: relative;
-    color: ${nhfBlue};
-    margin-left: 0;
-    align-self: center;
-    bottom: 1rem;
-  }
-`;
-
 export const TitleText = styled.h1`
   font-family: "Roboto Slab";
   color: #fff;
