@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import Button from "../../components/Button";
 
 const nhfBlue = "#4a90e2";
-const nhfYellow = "#e7ff00";
+// const nhfYellow = "#e7ff00";
 
 export const LandingPageComponent = styled.div`
   display: flex;
@@ -54,7 +53,7 @@ export const Copyright = styled.div`
   margin-left: 2rem;
 
   @media only screen and (max-width: 1024px) {
-      bottom: 2rem;
+    bottom: 2rem;
   }
 
   @media only screen and (max-width: 786px) {
@@ -101,7 +100,7 @@ export const SubtitleText = styled.h4`
   }
 
   @media only screen and (max-width: 1024px) {
-      margin-left: 4rem;
+    margin-left: 4rem;
   }
 
   @media only screen and (max-width: 786px) {
@@ -122,9 +121,9 @@ export const Definition = styled.p`
   margin-top: 2rem;
 
   @media only screen and (max-width: 1024px) {
-      margin-left: 4rem;
-      width: 76%;
-      font-size: 1.2rem;
+    margin-left: 4rem;
+    width: 76%;
+    font-size: 1.2rem;
   }
 
   @media only screen and (max-width: 786px) {
@@ -143,7 +142,7 @@ export const WarningWrapper = styled.div`
   align-items: center;
 
   @media only screen and (max-width: 1024px) {
-      padding-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   @media only screen and (max-width: 786px) {
@@ -173,7 +172,7 @@ export const WarningSubtitle = styled.h4`
   margin-top: 6.563rem;
 
   @media only screen and (max-width: 1024px) {
-      margin-top: 3rem;
+    margin-top: 3rem;
   }
 
   @media only screen and (max-width: 786px) {
@@ -205,36 +204,19 @@ export const WarningText = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
-      margin-left: 2.5rem;
-      margin-right: 2.5rem;
-      margin-top: 1rem;
-      font-size: .9rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
 
-      & > p {
-          margin-top: 0.7rem;
-      }
+    & > p {
+      margin-top: 0.7rem;
+    }
   }
 
   @media only screen and (max-width: 786px) {
     margin-top: 0.5rem;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
-  }
-`;
-
-export const ButtonStyle = styled(Button)`
-  text-transform: uppercase;
-  font-family: "Dosis";
-  background-color: ${nhfBlue};
-  color: #fff;
-  border-radius: 0;
-  margin-top: 4rem;
-  width: 12rem;
-  cursor: pointer;
-  font-size: 1rem;
-
-  &:hover {
-      background-color: ${nhfYellow};
-      color: #000;
   }
 `;

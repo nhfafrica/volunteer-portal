@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "../../components/Button";
 import {
   LandingPageComponent,
   LandingPageContainer,
@@ -14,7 +15,6 @@ import {
   WarningTitle,
   DefinitionContainer,
   WarningText,
-  ButtonStyle,
 } from "./landingpage-style";
 
 function LandingPage() {
@@ -84,8 +84,8 @@ function LandingPage() {
               the right to do the same.
             </p>
           </WarningText>
-          <Link to="/apply">
-            <ButtonStyle>I agree </ButtonStyle>
+          <Link to="/apply" component={Button}>
+            I agree
           </Link>
         </WarningWrapper>
       </LandingPageContainer>
