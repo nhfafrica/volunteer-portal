@@ -11,7 +11,9 @@ function LandingPage() {
     <LandingPageComponent>
       <LandingPageContainer>
         <a href="//nhfafrica.org" target="_blank" rel="noopener noreferrer">
-          <Logo />
+          <LogoContainer>
+            <Logo />
+          </LogoContainer>
         </a>
         <VolunterSplash>
           <DefinitionContainer>
@@ -88,29 +90,44 @@ function LandingPage() {
 }
 
 // STYLES
+const LogoContainer = styled.div`
+  margin-left: 4rem;
+  width: 150px;
+  margin-top: 5rem;
+  position: absolute;
+
+  @media only screen and (max-width: 786px) {
+    width: 100px;
+    margin-left: 2rem;
+    margin-top: 3rem;
+  }
+`;
+
 const CopyrightContainer = styled.div`
   position: absolute;
   bottom: 3rem;
   margin-left: 2rem;
 
-  & div, a {
+  & div,
+  a {
     color: white;
   }
 
   @media only screen and (max-width: 1024px) {
-      bottom: 1rem;
+    bottom: 1rem;
   }
 
   @media only screen and (max-width: 786px) {
-      position: relative;
-      color: ${nhfBlue};
-      margin-left: 0;
-      align-self: center;
-      bottom: 1rem;
+    position: relative;
+    color: ${nhfBlue};
+    margin-left: 0;
+    align-self: center;
+    bottom: 1rem;
 
-      & div, a {
-          color: ${nhfBlue};
-      }
+    & div,
+    a {
+      color: ${nhfBlue};
+    }
   }
 `;
 
