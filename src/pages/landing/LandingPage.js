@@ -10,7 +10,9 @@ function LandingPage() {
   return (
     <LandingPageComponent>
       <LandingPageContainer>
-        <Logo />
+        <a href="//nhfafrica.org" target="_blank" rel="noopener noreferrer">
+          <Logo />
+        </a>
         <VolunterSplash>
           <DefinitionContainer>
             <TitleText>Volunteer</TitleText>
