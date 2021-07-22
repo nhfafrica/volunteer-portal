@@ -350,6 +350,10 @@ const FormContainer = styled.div`
   margin-top: 4rem;
   margin-bottom: 2rem;
 
+  @media (max-width: 1024px) {
+      width: 80%;
+  }
+
   @media (max-width: 768px) {
     width: 95%;
   }
@@ -401,6 +405,11 @@ const FormMain = styled.div`
   width: 100%;
   margin-left: 4rem;
   margin-right: 4rem;
+
+  @media (max-width: 768px) {
+      margin-left: 2rem;
+      margin-right: 2rem;
+  }
 `;
 
 const SectionHeader = styled.h4`
