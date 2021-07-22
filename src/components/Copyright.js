@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Copyright = (...props) => {
+const Copyright = ({ ...props }) => {
   return (
-    <CopyrightWrapper>
+      <CopyrightWrapper {...props}>
       &copy; {new Date().getFullYear()}{" "}
       <a href="//nhfafrica.org" target="_blank" rel="noopener noreferrer">
         Nyuma Harrison Foundation
@@ -14,7 +14,8 @@ const Copyright = (...props) => {
 
 const CopyrightWrapper = styled.div`
   color: black;
-  font-size: 0.8rem;
+  font-family: 'Roboto Condensed';
+  font-size: ${({ formpage }) => (formpage ? "1.25rem" : "0.8rem")};
 
   & > a {
     text-decoration: none;
