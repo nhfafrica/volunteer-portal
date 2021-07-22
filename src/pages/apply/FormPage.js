@@ -3,8 +3,18 @@ import Copyright from "../../components/Copyright";
 import styled from "styled-components";
 import "bulma/css/bulma.min.css";
 import { Form, Columns } from "react-bulma-components";
+import "./FormPage.css";
+import { FaEnvelope, FaUser, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  TiSocialInstagram,
+  TiSocialTwitter,
+  TiSocialFacebook,
+  TiSocialLinkedin,
+} from "react-icons/ti";
+import { MdSend } from "react-icons/md";
 
-const { Input, Field, Control, Label } = Form;
+const { Input, Field, Control, Label, Select, Textarea, Radio, Checkbox } =
+  Form;
 const { Column } = Columns;
 
 const FormPage = () => {
@@ -41,16 +51,292 @@ const FormPage = () => {
                 </Field>
               </Column>
             </Columns>
+            <Columns>
+              <Column>
+                <Field>
+                  <Label>Email</Label>
+                  <Control className="has-icons-left">
+                    <Input type="email" name="email" />
+                    <span class="icon is-small is-left">
+                      <FaEnvelope />
+                    </span>
+                  </Control>
+                </Field>
+              </Column>
+              <Column>
+                <Field>
+                  <Label>Phone</Label>
+                  <Control className="has-icons-left">
+                    <Input type="tel" name="phone" />
+                    <span class="icon is-small is-left">
+                      <FaUser />
+                    </span>
+                  </Control>
+                </Field>
+              </Column>
+            </Columns>
+            <Columns>
+              <Column>
+                <Field>
+                  <Label>Address</Label>
+                  <Control className="has-icons-left">
+                    <Input type="text" name="address" />
+                    <span class="icon is-small is-left">
+                      <FaMapMarkerAlt />
+                    </span>
+                  </Control>
+                </Field>
+              </Column>
+            </Columns>
+            <Columns>
+              <Column>
+                <Field>
+                  <Label>Preferred Gender Pronoun</Label>
+                  <Control>
+                    <div className="select">
+                      <Select name="genderPronoun">
+                        <option selected disabled>
+                          select your gender pronoun
+                        </option>
+                        <option>he</option>
+                        <option>she</option>
+                        <option>they</option>
+                        <option>prefer not to say</option>
+                      </Select>
+                    </div>
+                  </Control>
+                </Field>
+              </Column>
+              <Column>
+                <Field>
+                  <Label>Birthday</Label>
+                  <Control>
+                    <Input type="date" name="birthday" />
+                  </Control>
+                </Field>
+              </Column>
+              <Column>
+                <Field>
+                  <Label>Occupation</Label>
+                  <Control>
+                    <Input type="text" name="occupation" />
+                  </Control>
+                </Field>
+              </Column>
+            </Columns>
+            <SectionHeader>Social Background</SectionHeader>
+            <legend>
+              Please list your social media handles where applicable
+            </legend>
+            <Columns>
+              <Column>
+                <Control className="has-icons-left">
+                  <Input type="text" name="twitter" />
+                  <span class="icon is-small is-left twitter">
+                    <TiSocialTwitter />
+                  </span>
+                </Control>
+              </Column>
+              <Column>
+                <Control className="has-icons-left">
+                  <Input type="text" name="instagram" />
+                  <span class="icon is-small is-left instagram">
+                    <TiSocialInstagram />
+                  </span>
+                </Control>
+              </Column>
+            </Columns>
+            <Columns>
+              <Column>
+                <Control className="has-icons-left">
+                  <Input type="text" name="facebook" />
+                  <span class="icon is-small is-left facebook">
+                    <TiSocialFacebook />
+                  </span>
+                </Control>
+              </Column>
+              <Column>
+                <Control className="has-icons-left">
+                  <Input type="text" name="linkedin" />
+                  <span class="icon is-small is-left linkedin">
+                    <TiSocialLinkedin />
+                  </span>
+                </Control>
+              </Column>
+            </Columns>
+            <Columns>
+              <Column>
+                <Field>
+                  <Label>
+                    Who are your favorite social media personalities or public
+                    figures? Why do you like them?
+                  </Label>
+                  <Control>
+                    <Textarea name="favoriteSocialMediaProfiles" />
+                  </Control>
+                </Field>
+              </Column>
+            </Columns>
+            <Columns>
+              <Column>
+                <Field>
+                  <Label>Which NGO’s work do you follow or most admire?</Label>
+                  <Control>
+                    <Input type="text" name="favoriteNGO" />
+                  </Control>
+                </Field>
+              </Column>
+            </Columns>
+            <SectionHeader>Interest/Skills</SectionHeader>
+            <legend>
+              Which social media network are you most familiar with?
+            </legend>
+            <Control className="radioButtons">
+              <Radio name="socialMedia" value="linkedin">
+                LinkedIn
+              </Radio>
+              <Radio name="socialMedia" value="twitter">
+                Twitter
+              </Radio>
+              <Radio name="socialMedia" value="facebook">
+                Facebook
+              </Radio>
+              <Radio name="socialMedia" value="instagram">
+                Instagram
+              </Radio>
+            </Control>
+            <legend>What type of volunteer do you wish to be?</legend>
+            <Control className="volunteer-radios">
+              <Radio name="volunteerType" value="full-time">
+                Full-time volunteer (Works on a team and participates in ongoing
+                program and organisation work.)
+              </Radio>
+              <Radio name="volunteerType" value="part-time">
+                Part-time volunteer (Volunteers only on occasion to assist with
+                events.)
+              </Radio>
+            </Control>
+            <Field>
+              <legend>
+                What type of skills/experience would you like to contribute?
+              </legend>
+              <Columns>
+                <Column>
+                  <Control>
+                    <Checkbox
+                      name="skills"
+                      value="prograPhotography/Videography"
+                    >
+                      Photography/Videography
+                    </Checkbox>
+                  </Control>
+                  <Control>
+                    <Checkbox name="skills" value="Social Media Management">
+                      Social Media Management
+                    </Checkbox>
+                  </Control>
+                  <Control>
+                    <Checkbox name="skills" value="Fundraising/Grant Writing">
+                      Fundraising/Grant Writing
+                    </Checkbox>
+                  </Control>
+                  <Control>
+                    <Checkbox name="skills" value="IT/Technology Management">
+                      IT/Technology Management
+                    </Checkbox>
+                  </Control>
+                  <Control>
+                    <Checkbox name="skills" value="Driving">
+                      Driving
+                    </Checkbox>
+                  </Control>
+                </Column>
+                <Column>
+                  <Control>
+                    <Checkbox name="skills" value="Event Planning and Hosting">
+                      Event Planning and Hosting
+                    </Checkbox>
+                  </Control>
+                  <Control>
+                    <Checkbox name="skills" value="Youth engagement">
+                      Youth engagement
+                    </Checkbox>
+                  </Control>
+                  <Control>
+                    <Checkbox
+                      name="skills"
+                      value="Health/Medical Care Delivery"
+                    >
+                      Health/Medical Care Delivery
+                    </Checkbox>
+                  </Control>
+                  <Control>
+                    <Checkbox name="skills" value="Document editing/Writing">
+                      Document editing/Writing
+                    </Checkbox>
+                  </Control>
+                  <Control>
+                    <Checkbox name="skills" value="Logistics">
+                      Logistics
+                    </Checkbox>
+                  </Control>
+                </Column>
+              </Columns>
+            </Field>
+            <Columns>
+              <Column>
+                <Field>
+                  <Label>Why do you want to volunteer with NHF?</Label>
+                  <Control>
+                    <Textarea name="reasonForVolunteering" />
+                  </Control>
+                </Field>
+              </Column>
+            </Columns>
+            <ButtonContainer>
+              <Button>
+                Submit &nbsp; <MdSend />
+              </Button>
+            </ButtonContainer>
           </FormMain>
         </FormBody>
       </FormContainer>
-      <Copyright landingpage />
+      <Copyright formpage="true" className="copyright" />
     </MainContainer>
   );
 };
 
 // STYLES
 const nhfBlue = "#4a90e2";
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+`;
+
+const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${nhfBlue};
+  font-size: large;
+  font-family: "Dosis";
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-sizing: content-box;
+  padding: 0.02em 2rem;
+  cursor: pointer;
+
+  & svg {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    background-color: red;
+  }
+`;
 
 const MainContainer = styled.div`
   background-color: #e7e7e7;
@@ -60,7 +346,7 @@ const MainContainer = styled.div`
 `;
 
 const FormContainer = styled.div`
-  width: 60%;
+  width: 50%;
   margin-top: 4rem;
   margin-bottom: 2rem;
 
@@ -75,7 +361,7 @@ const HeaderImageWrapper = styled.div`
   margin-top: 4rem;
   & > img {
     border-radius: 50%;
-    width: 15rem;
+    width: 12rem;
   }
 `;
 
