@@ -1,7 +1,8 @@
 import { useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import WebFont from "webfontloader";
-import { GlobalStyle, MainContent } from "./global-styles";
-import { LandingPage } from "./pages";
+import { GlobalStyle } from "./global-styles";
+import { LandingPage, FormPage } from "./pages";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           "Roboto",
           "Roboto Condensed",
           "PT Sans",
+          "Fjalla One",
         ],
       },
     });
@@ -24,9 +26,12 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <MainContent>
-        <LandingPage />
-      </MainContent>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/apply" component={FormPage}></Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
