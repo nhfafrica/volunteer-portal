@@ -81,6 +81,22 @@ const FormPage = () => {
                 },
                 reasonForVolunteering: values.reasonForVolunteering,
               };
+              fetch(
+                "https://nhf-api.herokuapp.com/api/v1/volunteer-applicants",
+                {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(formattedData),
+                }
+              )
+                .then((response) => response.json())
+                .then((responseData) => {
+                  console.log(responseData);
+                })
+                .catch((error) => {
+                  console.log("error", error);
+                });
+
               console.log(formattedData);
             }}
           >
