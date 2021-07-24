@@ -1,4 +1,5 @@
 import React from "react";
+import Swal from "sweetalert2";
 import { Formik, Field as FormikField } from "formik";
 import Copyright from "../../components/Copyright";
 import styled from "styled-components";
@@ -89,15 +90,33 @@ const FormPage = () => {
                   body: JSON.stringify(formattedData),
                 }
               )
-                .then((response) => response.json())
+                .then((response) => {
+                  if (response.status === 201) {
+                    Swal.fire({
+                      title: "Application Successful!",
+                      text: "Check your email for the next steps.",
+                      icon: "success",
+                    });
+                    setTimeout(() => {
+                      window.location = "https://nhfafrica.org";
+                    }, 3000);
+                  } else if (response.status === 409) {
+                    Swal.fire({
+                      title: "Already Registered",
+                      text: "You have already registered",
+                      icon: "warning",
+                    });
+                    setTimeout(() => {
+                      window.location = "https://nhfafrica.org";
+                    }, 3000);
+                  }
+                })
                 .then((responseData) => {
                   console.log(responseData);
                 })
                 .catch((error) => {
                   console.log("error", error);
                 });
-
-              console.log(formattedData);
             }}
           >
             {({
