@@ -14,7 +14,7 @@ import {
 } from "react-icons/ti";
 import { MdSend } from "react-icons/md";
 
-const { Input, Field, Control, Label, Select, Textarea } = Form;
+const { Input, Field, Control, Label, Textarea } = Form;
 const { Column } = Columns;
 
 const FormPage = () => {
@@ -39,7 +39,7 @@ const FormPage = () => {
               phoneNumber: "",
               physicalAddress: "",
               pronoun: "",
-              birthday: "",
+              birthDay: "",
               occupation: "",
               twitterHandle: "",
               instagramHandle: "",
@@ -61,7 +61,7 @@ const FormPage = () => {
                 additionalData: {
                   physicalAddress: values.physicalAddress,
                   pronoun: values.pronoun,
-                  birthday: values.birthday,
+                  birthDay: values.birthDay,
                   occupation: values.occupation,
                 },
                 socialBackground: {
@@ -106,6 +106,7 @@ const FormPage = () => {
                           onChange={handleChange}
                           onBlur={handleBlur}
                           value={values.firstName}
+                          required
                         />
                       </Control>
                     </Field>
@@ -120,6 +121,7 @@ const FormPage = () => {
                           onChange={handleChange}
                           onBlur={handleBlur}
                           value={values.lastName}
+                          required
                         />
                       </Control>
                     </Field>
@@ -136,6 +138,7 @@ const FormPage = () => {
                           onChange={handleChange}
                           onBlur={handleBlur}
                           value={values.email}
+                          required
                         />
                         <span className="icon is-small is-left">
                           <FaEnvelope />
@@ -153,6 +156,7 @@ const FormPage = () => {
                           onChange={handleChange}
                           onBlur={handleBlur}
                           value={values.phoneNumber}
+                          required
                         />
                         <span className="icon is-small is-left">
                           <FaUser />
@@ -172,6 +176,7 @@ const FormPage = () => {
                           onChange={handleChange}
                           onBlur={handleBlur}
                           value={values.physicalAddress}
+                          required
                         />
                         <span className="icon is-small is-left">
                           <FaMapMarkerAlt />
@@ -186,13 +191,15 @@ const FormPage = () => {
                       <Label>Preferred Gender Pronoun</Label>
                       <Control>
                         <div className="select">
-                          <Select
+                          <FormikField
+                            as="select"
                             name="pronoun"
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.pronoun}
+                            required
                           >
-                            <option defaultValue disabled>
+                            <option defaultValue>
                               select your gender pronoun
                             </option>
                             <option value="he">he</option>
@@ -201,7 +208,7 @@ const FormPage = () => {
                             <option value="prefer not to say">
                               prefer not to say
                             </option>
-                          </Select>
+                          </FormikField>
                         </div>
                       </Control>
                     </Field>
@@ -215,6 +222,7 @@ const FormPage = () => {
                           name="birthDay"
                           onChange={handleChange}
                           onBlur={handleBlur}
+                          required
                         />
                       </Control>
                     </Field>
@@ -229,6 +237,7 @@ const FormPage = () => {
                           onChange={handleChange}
                           onBlur={handleBlur}
                           value={values.occupation}
+                          required
                         />
                       </Control>
                     </Field>
@@ -311,6 +320,7 @@ const FormPage = () => {
                           onChange={handleChange}
                           onBlur={handleBlur}
                           value={values.publicFigures}
+                          required
                         />
                       </Control>
                     </Field>
@@ -329,6 +339,7 @@ const FormPage = () => {
                           onChange={handleChange}
                           onBlur={handleBlur}
                           value={values.mostAdmiredNGO}
+                          required
                         />
                       </Control>
                     </Field>
@@ -344,6 +355,7 @@ const FormPage = () => {
                       type="radio"
                       value="linkedin"
                       name="preferredSocialMedia"
+                      required
                     ></FormikField>
                     &nbsp; LinkedIn
                   </label>
@@ -352,6 +364,7 @@ const FormPage = () => {
                       type="radio"
                       value="twitter"
                       name="preferredSocialMedia"
+                      required
                     ></FormikField>
                     &nbsp; Twitter
                   </label>
@@ -360,6 +373,7 @@ const FormPage = () => {
                       type="radio"
                       value="facebook"
                       name="preferredSocialMedia"
+                      required
                     />
                     &nbsp; Facebook
                   </label>
@@ -368,6 +382,7 @@ const FormPage = () => {
                       type="radio"
                       value="instagram"
                       name="preferredSocialMedia"
+                      required
                     />
                     &nbsp; Instagram
                   </label>
@@ -379,6 +394,7 @@ const FormPage = () => {
                       type="radio"
                       value="full-time"
                       name="volunteerType"
+                      required
                     />
                     &nbsp; Full-time volunteer (Works on a team and participates
                     in ongoing program and organisation work.)
@@ -388,6 +404,7 @@ const FormPage = () => {
                       type="radio"
                       value="part-time"
                       name="volunteerType"
+                      required
                     />
                     &nbsp; Part-time volunteer (Volunteers only on occasion to
                     assist with events.)
@@ -514,6 +531,7 @@ const FormPage = () => {
                           onChange={handleChange}
                           onBlur={handleBlur}
                           value={values.reasonForVolunteering}
+                          required
                         />
                       </Control>
                     </Field>
