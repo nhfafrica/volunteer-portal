@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -19,11 +19,4 @@ button {
 body {
     font-family: sans-serif;
 }
-`;
-
-export const MainContent = styled.main`
-  width: 100%;
-  background-color: #4a90e2;
-  display: flex;
-  flex-direction: row;
 `;
